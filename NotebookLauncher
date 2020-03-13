@@ -1,0 +1,14 @@
+#On host-start notebook
+module load anaconda3/2019.07
+source activate scipy
+jupyter notebook --no-browser --port=8888
+
+#On local-forward via ssh
+ssh -N -f -L localhost:8889:localhost:8888 me@serveraddress
+
+#Open browser to http://localhost:8889
+
+
+
+
+#odcf-lsf01.dkfz.de
